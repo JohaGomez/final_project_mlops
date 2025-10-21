@@ -1,0 +1,21 @@
+project_name: "final_project_mlops"
+random_state: 42
+test_size: 0.2
+
+data:
+  external_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00222/bank-additional.zip"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  target: "y"
+
+model:
+  name: "logreg"
+  type: "sklearn.linear_model.LogisticRegression"
+  params:
+    max_iter: 500
+    solver: "lbfgs"
+    n_jobs: -1
+
+mlflow:
+  tracking_uri: "file:./mlruns"
+  experiment_name: "ci-cd-mlflow-local"
