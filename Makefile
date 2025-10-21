@@ -7,7 +7,7 @@ install:
 	$(PY) -m pip install -r requirements.txt
 
 lint:
-	flake8 src
+	flake8 src --max-line-length=120
 
 format:
 	black src tests
