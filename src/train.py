@@ -70,6 +70,7 @@ def main():
         # Guardar localmente también
         model_path = os.path.join("models", "logreg_model.pkl")
         import joblib
+
         joblib.dump(model, model_path)
 
         print(f"✅ Modelo entrenado. Accuracy: {acc:.4f} | F1: {f1:.4f}")

@@ -48,9 +48,13 @@ def preprocess_data(cfg: dict) -> tuple:
 
     # Guardar procesados
     ensure_dir(cfg["data"]["processed_dir"])
-    X_train.to_csv(os.path.join(cfg["data"]["processed_dir"], "X_train.csv"), index=False)
+    X_train.to_csv(
+        os.path.join(cfg["data"]["processed_dir"], "X_train.csv"), index=False
+    )
     X_test.to_csv(os.path.join(cfg["data"]["processed_dir"], "X_test.csv"), index=False)
-    y_train.to_csv(os.path.join(cfg["data"]["processed_dir"], "y_train.csv"), index=False)
+    y_train.to_csv(
+        os.path.join(cfg["data"]["processed_dir"], "y_train.csv"), index=False
+    )
     y_test.to_csv(os.path.join(cfg["data"]["processed_dir"], "y_test.csv"), index=False)
 
     print("💾 Datos procesados guardados en data/processed/")
