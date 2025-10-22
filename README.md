@@ -61,7 +61,7 @@ El tracking se ejecuta en modo local (`file://.../mlruns`) y permite visualizar 
 ```bash
 make mlflow-ui
 
-### Evidencia del modelo registrado con MLflow
+## 6. Evidencia del modelo registrado con MLflow
 
 El siguiente run corresponde al entrenamiento y registro del modelo de regresión logística
 dentro del experimento **ci-cd-mlflow-local**, ejecutado automáticamente desde el pipeline CI/CD.
@@ -71,5 +71,3 @@ dentro del experimento **ci-cd-mlflow-local**, ejecutado automáticamente desde 
 - **F1 Score:** 0.5132  
 - **Archivo fuente:** `src/train.py`  
 - **Estado:** Finished ✅  
-
-![Evidencia MLflow](./images/mlflow_run.png)
