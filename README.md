@@ -61,7 +61,7 @@ Registro del modelo en MLflow con accuracy y f1_score documentados (archivo mlru
 
 ---
 
-## 7. Evidencia del modelo registrado con MLflow
+## 7. Evidencia del modelo registrado con MLflow (make mlflow-ui)
 
 El siguiente run corresponde al entrenamiento y registro del modelo de regresión logística
 dentro del experimento **ci-cd-mlflow-local**, ejecutado automáticamente desde el pipeline CI/CD.
@@ -71,3 +71,7 @@ dentro del experimento **ci-cd-mlflow-local**, ejecutado automáticamente desde 
 - **F1 Score:** 0.5132  
 - **Archivo fuente:** `src/train.py`  
 - **Estado:** Finished ✅  
+
+> 📊 Este registro demuestra el correcto funcionamiento del tracking de MLflow,
+> incluyendo el registro automático de parámetros, métricas y artefactos del modelo
+> dentro del flujo CI/CD implementado.
