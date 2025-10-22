@@ -50,18 +50,18 @@ El modelo fue evaluado con métricas relevantes para problemas de clasificación
 ---
 
 ## 6. Tracking con MLflow
-Se utilizó **MLflow Tracking** para registrar:
-- Parámetros (`log_param`)
-- Métricas (`log_metric`)
-- Modelo y artefactos (`log_model`)
-- Firma del modelo (`signature`)
-- Ejemplo de entrada (`input_example`)
+Se utilizó MLflow Tracking en modo local (file://.../mlruns) para:
 
-El tracking se ejecuta en modo local (`file://.../mlruns`) y permite visualizar los experimentos con el comando:
-```bash
-make mlflow-ui
+  - Registrar parámetros, métricas y artefactos del modelo.
+  - Guardar la firma del modelo y un ejemplo de entrada.
+  - Permitir trazabilidad de experimentos mediante la interfaz local (mlflow ui).
 
-## 6. Evidencia del modelo registrado con MLflow
+Evidencia:
+Registro del modelo en MLflow con accuracy y f1_score documentados (archivo mlruns/).
+
+---
+
+## 7. Evidencia del modelo registrado con MLflow
 
 El siguiente run corresponde al entrenamiento y registro del modelo de regresión logística
 dentro del experimento **ci-cd-mlflow-local**, ejecutado automáticamente desde el pipeline CI/CD.
